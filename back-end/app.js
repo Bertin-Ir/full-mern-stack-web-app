@@ -78,5 +78,19 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+// a route that returns the content of the About Us page as JSON
+app.get('/about', (req, res) => {
+  res.json({
+    name: 'Bertin Iradukunda',
+    paragraphs: [
+      "Hi, I'm Bertin! I'm a student studying Computer Science and Mathematics.",
+      "I'm passionate about machine learning and software development. I enjoy building projects that turn ideas into working applications, and I'm always looking to learn new tools and techniques along the way.",
+      'In my free time, I like coding on personal projects, watching football, and connecting with friends.',
+    ],
+    imageUrl: 'https://github.com/Bertin-Ir.png',
+    status: 'good',
+  })
+})
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
